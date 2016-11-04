@@ -80,7 +80,7 @@ h1.animated{
   background: black;
   position:absolute;
   z-index:-1;
-  opacity:0.5;
+  opacity:0.6;
 
 }
 /*Adding media queries for image responsive*/
