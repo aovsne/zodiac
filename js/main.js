@@ -64,7 +64,7 @@ zodiacArray =[
 // getting the function getInfo from HTML to work
 function getInfo(){
 	// setting variable for the id(zodiac) from HTML input as starSign
-	var starSign = document.getElementById('lulu').value
+	var starSign = document.getElementById('lulu').value.toUpperCase()
 
 	// now putting the Array on loop so that it could go through every elements from the Array list
 	for(i = 0; i < zodiacArray.length; i++){
@@ -72,12 +72,15 @@ function getInfo(){
 			document.getElementById('karma').innerHTML = starSign
 			document.getElementById('image').src = zodiacArray[i].image
 			document.getElementById('content').innerHTML = zodiacArray[i].content
+      
 			return
 		}
+    
 	}
 	document.getElementById('karma').innerHTML = 'This is not a zodiac Sign, Please Try Again!'
-	document.getElementById('image').src = ''
+	document.getElementById('image').src = 
 	document.getElementById('content').innerHTML = ''
+  
 
 }
 
