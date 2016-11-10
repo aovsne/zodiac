@@ -72,15 +72,18 @@ function getInfo(){
 			document.getElementById('karma').innerHTML = starSign
 			document.getElementById('image').src = zodiacArray[i].image
 			document.getElementById('content').innerHTML = zodiacArray[i].content
+      document.getElementById('karma').className = "Sign of stars"
+      document.getElementById('image').className = "photograph"
+      document.getElementById('content').className = "description"
       
 			return
 		}
+    else{
+      document.getElementById('karma').innerHTML = 'This is not the right sign, please try again'
+    }
     
 	}
-	document.getElementById('karma').innerHTML = 'This is not a zodiac Sign, Please Try Again!'
-	document.getElementById('image').src = 
-	document.getElementById('content').innerHTML = ''
-  
+	
 
 }
 
