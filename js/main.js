@@ -61,6 +61,11 @@ zodiacArray =[
 		content: "You're best attributes are: Determination, Dominance, Perservering, Practical, Willful"
 	}
 ]
+var error = {
+  name: 'INVALID SIGN!',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/1/14/Kendell_Geers_-_T-error_(2003)_sans_T.jpg',
+  content: 'This is not the right star sign, please try again!!'
+}
 // getting the function getInfo from HTML to work
 function getInfo(){
 	// setting variable for the id(zodiac) from HTML input as starSign
@@ -72,14 +77,14 @@ function getInfo(){
 			document.getElementById('karma').innerHTML = starSign
 			document.getElementById('image').src = zodiacArray[i].image
 			document.getElementById('content').innerHTML = zodiacArray[i].content
-      document.getElementById('karma').className = "Sign of stars"
-      document.getElementById('image').className = "photograph"
-      document.getElementById('content').className = "description"
+      
       
 			return
 		}
     else{
-      document.getElementById('karma').innerHTML = 'This is not the right sign, please try again'
+      document.getElementById('karma').innerHTML = error.name
+      document.getElementById('image').src = error.image
+      document.getElementById('content').innerHTML = error.content
     }
     
 	}
