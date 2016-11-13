@@ -63,7 +63,7 @@ zodiacArray =[
 ]
 var error = {
   name: 'INVALID SIGN!',
-  image: 'https://upload.wikimedia.org/wikipedia/commons/1/14/Kendell_Geers_-_T-error_(2003)_sans_T.jpg',
+  image: 'img/error.jpg',
   content: 'This is not the right star sign, please try again!!'
 }
 // getting the function getInfo from HTML to work
