@@ -37,12 +37,12 @@ button.btn:hover{
 	color:white;
 	border:none;
 }
-img#image{
+img.dudu{
 	width:70%;
 	height:230px;
 	border:white;
 	border-radius:50%;
-	display:none;
+	display: none;
 	box-shadow:4px 4px 4px white
 
 }
@@ -78,14 +78,19 @@ h1.animated{
 @use cssnext;
 #zodiac {
   background: black;
-  position:absolute;
-  z-index:-1;
+  position:fixed;
+  min-width:100%;
+  min-height:100%;
+  top:0;
+  bottom:0;
+  z-index:-1000;
   opacity:0.6;
+  overflow:hidden;
 
 }
 /*Adding media queries for image responsive*/
 @media (max-width:752px){
-	img#image{
+	img.dudu{
 		width:40%;
 	height:150px;
 	}

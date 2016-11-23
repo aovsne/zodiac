@@ -66,6 +66,14 @@ var error = {
   image: 'img/error.jpg',
   content: 'This is not the right star sign, please try again!!'
 }
+
+document.getElementById('lulu').addEventListener('keypress', enterKey)
+function enterKey(e){
+  if(e.KeyCode == 13){
+    getInfo()
+  }
+}
+
 // getting the function getInfo from HTML to work
 function getInfo(){
 	// setting variable for the id(zodiac) from HTML input as starSign
@@ -75,19 +83,19 @@ function getInfo(){
 	for(i = 0; i < zodiacArray.length; i++){
 		if(starSign == zodiacArray[i].name){
 			document.getElementById('karma').innerHTML = starSign
-			document.getElementById('image').src = zodiacArray[i].image
+			document.getElementById('image').setAttribute('src', zodiacArray[i].image)
 			document.getElementById('content').innerHTML = zodiacArray[i].content
-      
-      
-			return
+      document.getElementById('karma').className = 'gogo'
+      document.getElementById('image').className = 'dudu'
+      document.getElementById('content').className = 'ruru'
+      return
 		}
-    else{
-      document.getElementById('karma').innerHTML = error.name
-      document.getElementById('image').src = error.image
-      document.getElementById('content').innerHTML = error.content
-    }
+   
     
-	}
+	}   document.getElementById('karma').innerHTML = error.name
+      document.getElementById('image').setAttribute('src', error.image)
+      document.getElementById('content').innerHTML = error.content
+      document.getElementById('image').className = 'dudu'
 	
 
 }
